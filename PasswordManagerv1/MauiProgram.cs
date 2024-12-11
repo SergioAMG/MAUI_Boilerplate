@@ -21,14 +21,16 @@ namespace PasswordManagerv1
                     fonts.AddFont("Font Awesome 6 Free-Regular-400.otf", "FontAwesomeRegular");
                     fonts.AddFont("Font Awesome 6 Free-Solid-900.otf", "FontAwesomeSolid");
                 });
-
-            builder.Services.AddTransient<MainPage, MainPageViewModel>();
-
+            RegisterPagesAndViewModels(builder);
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
             return builder.Build();
+        }
+
+        public static void RegisterPagesAndViewModels(MauiAppBuilder builder)
+        {
+            builder.Services.AddTransient<MainPage, MainPageViewModel>();
         }
     }
 }
