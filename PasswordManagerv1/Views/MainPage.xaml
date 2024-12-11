@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:styles="clr-namespace:PasswordManagerv1.Resources.Styles"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Class="PasswordManagerv1.Views.MainPage"
              xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels"
+             xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
              x:DataType="viewModels:MainPageViewModel"
-             xmlns:res="clr-namespace:PasswordManagerv1.Resources">
+             x:Class="PasswordManagerv1.Views.MainPage">
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
@@ -18,7 +18,7 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" />
  
             <Label
-                Text="{x:Static res:AppResource.WelcomeMsg}"
+                Text="{x:Static localization:AppResource.WelcomeMsg}"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
