@@ -13,13 +13,13 @@
             <Tab.Icon>
                 <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="PaleVioletRed" />
             </Tab.Icon>
-            <ShellContent Title="Domestic"
+            <ShellContent Title="{x:Static localization:AppResources.DomesticText}"
                           ContentTemplate="{DataTemplate views:AirbnbDomesticPage}">
                 <ShellContent.Icon>
                     <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />
                 </ShellContent.Icon>
             </ShellContent>
-            <ShellContent Title="International"
+            <ShellContent Title="{x:Static localization:AppResources.InternationalText}"
                           ContentTemplate="{DataTemplate views:AirbnbInternationalPage}">
                 <ShellContent.Icon>
                     <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />

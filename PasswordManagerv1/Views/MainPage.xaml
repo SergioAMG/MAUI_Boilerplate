@@ -18,7 +18,7 @@
                 SemanticProperties.Description="dot net bot in a race car number eight" />
  
             <Label
-                Text="{x:Static localization:AppResource.WelcomeMsg}"
+                Text="{x:Static localization:AppResources.WelcomeMsg}"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 

@@ -6,7 +6,7 @@
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
              x:DataType="viewModels:FacebookPageViewModel"
              x:Class="PasswordManagerv1.Views.Brands.FacebookPage"
-             Title="{x:Static localization:AppResource.FacebookPageTitle}">
+             Title="{x:Static localization:AppResources.FacebookPageTitle}">
     <Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -15,21 +15,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="Wrap">
-            <Label Text="{x:Static localization:AppResource.WelcomeText}"
+        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="NoWrap">
+            <Label Text="{x:Static localization:AppResources.WelcomeText}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.WelcomeText}"/>
-            <Label Text="{x:Static localization:AppResource.FacebookPageTitle}"
+                   SemanticProperties.Description="{x:Static localization:AppResources.WelcomeText}"/>
+            <Label Text="{x:Static localization:AppResources.FacebookPageTitle}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.FacebookPageTitle}"/>
+                   SemanticProperties.Description="{x:Static localization:AppResources.FacebookPageTitle}"/>
         </FlexLayout>
         <FlexLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
             <ImageButton BackgroundColor="Transparent" Margin="0,10,0,0"
-                SemanticProperties.Description="{x:Static localization:AppResource.LogotypeText}"
+                SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
                 Command="{Binding DisplayLogoButtonPressedActionCommand}"
-                CommandParameter="{x:Static localization:AppResource.FacebookPageTitle}">
+                CommandParameter="{x:Static localization:AppResources.FacebookPageTitle}">
                 <ImageButton.Source>
                     <FontImageSource Glyph="{x:Static icons:BrandIcons.Facebook }" FontFamily="FontAwesomeBrands" Size="60" Color="Blue" />
                 </ImageButton.Source>

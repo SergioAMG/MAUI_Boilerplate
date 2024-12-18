@@ -118,30 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonPressed" xml:space="preserve">
-    <value>Boton presionado: </value>
+    <value>Button pressed: </value>
+    <comment>Button Pressed</comment>
   </data>
   <data name="FacebookPageTitle" xml:space="preserve">
-    <value>Pagina de Facebook</value>
+    <value>Facebook Page</value>
+    <comment>Facebook Page Title</comment>
   </data>
   <data name="AirbnbDomesticPageTitle" xml:space="preserve">
-    <value>Pagina Local de Airbnb</value>
+    <value>Facebook Page</value>
+    <comment>Airbnb Domestic Page Title</comment>
   </data>
   <data name="AirbnbInternationalPageTitle" xml:space="preserve">
-    <value>Pagina Internacional de Airbnb</value>
+    <value>Facebook Page</value>
+    <comment>Airbnb International Page Title</comment>
   </data>
   <data name="WhatsAppPageTitle" xml:space="preserve">
-    <value>Pagina de Whats App</value>
+    <value>Whats App Page</value>
+    <comment>Whats App Page Title</comment>
   </data>
   <data name="InstagramPageTitle" xml:space="preserve">
-    <value>Pagina de Instagram</value>
+    <value>Instagram Page</value>
+    <comment>Instagram Page Title</comment>
   </data>
   <data name="LogotypeText" xml:space="preserve">
-    <value>Logotipo</value>
+    <value>Logotype</value>
+    <comment>Logotype Text</comment>
   </data>
   <data name="WelcomeMsg" xml:space="preserve">
-    <value>Hola Mundo! Bienvenidos a MAUI</value>
+    <value>Hello World! Welcome to MAUI</value>
+    <comment>Welcome Message</comment>
   </data>
   <data name="WelcomeText" xml:space="preserve">
-    <value>Bienvenido a </value>
+    <value>Welcome to</value>
+    <comment>Welcome Text</comment>
+  </data>
+  <data name="DomesticText" xml:space="preserve">
+    <value>Domestic</value>
+    <comment>Domestic Text</comment>
+  </data>
+  <data name="InternationalText" xml:space="preserve">
+    <value>International</value>
+    <comment>International Text</comment>
   </data>
 </root>

@@ -6,7 +6,7 @@
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
              x:DataType="viewModels:WhatsAppPageViewModel"
              x:Class="PasswordManagerv1.Views.Brands.WhatsAppPage"
-             Title="{x:Static localization:AppResource.WhatsAppPageTitle}">
+             Title="{x:Static localization:AppResources.WhatsAppPageTitle}">
     <Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -15,21 +15,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="Wrap">
-            <Label Text="{x:Static localization:AppResource.WelcomeText}"
+        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="NoWrap">
+            <Label Text="{x:Static localization:AppResources.WelcomeText}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.WelcomeText}"/>
-            <Label Text="{x:Static localization:AppResource.WhatsAppPageTitle}"
+                   SemanticProperties.Description="{x:Static localization:AppResources.WelcomeText}"/>
+            <Label Text="{x:Static localization:AppResources.WhatsAppPageTitle}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.WhatsAppPageTitle}"/>
+                   SemanticProperties.Description="{x:Static localization:AppResources.WhatsAppPageTitle}"/>
         </FlexLayout>
         <FlexLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
             <ImageButton BackgroundColor="Transparent" Margin="0,10,0,0"
-                SemanticProperties.Description="{x:Static localization:AppResource.LogotypeText}"
+                SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
                 Command="{Binding DisplayLogoButtonPressedActionCommand}"
-                CommandParameter="{x:Static localization:AppResource.WhatsAppPageTitle}">
+                CommandParameter="{x:Static localization:AppResources.WhatsAppPageTitle}">
                 <ImageButton.Source>
                     <FontImageSource Glyph="{x:Static icons:BrandIcons.Whatsapp }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
                 </ImageButton.Source>

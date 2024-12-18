@@ -6,7 +6,7 @@
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
              x:DataType="viewModels:AirbnbDomesticPageViewModel"
              x:Class="PasswordManagerv1.Views.Brands.AirbnbDomesticPage"
-             Title="{x:Static localization:AppResource.AirbnbDomesticPageTitle}">
+             Title="{x:Static localization:AppResources.AirbnbDomesticPageTitle}">
     <Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -15,21 +15,21 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="Wrap">
-            <Label Text="{x:Static localization:AppResource.WelcomeText}"
+        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="NoWrap">
+            <Label Text="{x:Static localization:AppResources.WelcomeText}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.WelcomeText}"/>
-            <Label Text="{x:Static localization:AppResource.AirbnbDomesticPageTitle}"
+                   SemanticProperties.Description="{x:Static localization:AppResources.WelcomeText}"/>
+            <Label Text="{x:Static localization:AppResources.AirbnbDomesticPageTitle}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResource.AirbnbDomesticPageTitle}"/>
+                   SemanticProperties.Description="{x:Static localization:AppResources.AirbnbDomesticPageTitle}"/>
         </FlexLayout>
         <FlexLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
             <ImageButton BackgroundColor="Transparent" Margin="0,10,0,0"
-                SemanticProperties.Description="{x:Static localization:AppResource.LogotypeText}"
+                SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
                 Command="{Binding DisplayLogoButtonPressedActionCommand}"
-                CommandParameter="{x:Static localization:AppResource.AirbnbDomesticPageTitle}">
+                CommandParameter="{x:Static localization:AppResources.AirbnbDomesticPageTitle}">
                 <ImageButton.Source>
                     <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="60" Color="PaleVioletRed" />
                 </ImageButton.Source>

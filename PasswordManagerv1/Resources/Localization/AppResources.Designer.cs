@@ -22,14 +22,14 @@ namespace PasswordManagerv1.Resources.Localization {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class AppResource {
+    internal class AppResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal AppResource() {
+        internal AppResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace PasswordManagerv1.Resources.Localization {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PasswordManagerv1.Resources.Localization.AppResource", typeof(AppResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PasswordManagerv1.Resources.Localization.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -88,6 +88,15 @@ namespace PasswordManagerv1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Domestic.
+        /// </summary>
+        internal static string DomesticText {
+            get {
+                return ResourceManager.GetString("DomesticText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Facebook Page.
         /// </summary>
         internal static string FacebookPageTitle {
@@ -102,6 +111,15 @@ namespace PasswordManagerv1.Resources.Localization {
         internal static string InstagramPageTitle {
             get {
                 return ResourceManager.GetString("InstagramPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to International.
+        /// </summary>
+        internal static string InternationalText {
+            get {
+                return ResourceManager.GetString("InternationalText", resourceCulture);
             }
         }
         

@@ -21,7 +21,7 @@ namespace PasswordManagerv1.ViewModels
         public async Task DisplayLogoButtonPressedActionAsync(string button)
         {
             CancellationTokenSource cancellationTokenSource = new();
-            await CreateGenericToast(AppResource.ButtonPressed + button).Show(cancellationTokenSource.Token);
+            await CreateGenericToast(AppResources.ButtonPressed + button).Show(cancellationTokenSource.Token);
         }
 
         IToast CreateGenericToast(string message)

@@ -118,30 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ButtonPressed" xml:space="preserve">
-    <value>Button pressed: </value>
+    <value>Boton presionado: </value>
   </data>
   <data name="FacebookPageTitle" xml:space="preserve">
-    <value>Facebook Page</value>
+    <value>Pagina de Facebook</value>
   </data>
   <data name="AirbnbDomesticPageTitle" xml:space="preserve">
-    <value>Airbnb Domestic Page</value>
+    <value>Pagina Local de Airbnb</value>
   </data>
   <data name="AirbnbInternationalPageTitle" xml:space="preserve">
-    <value>Airbnb International Page</value>
+    <value>Pagina Internacional de Airbnb</value>
   </data>
   <data name="WhatsAppPageTitle" xml:space="preserve">
-    <value>Whats App Page</value>
+    <value>Pagina de Whats App</value>
   </data>
   <data name="InstagramPageTitle" xml:space="preserve">
-    <value>Instagram Page</value>
+    <value>Pagina de Instagram</value>
   </data>
   <data name="LogotypeText" xml:space="preserve">
-    <value>Logotype</value>
+    <value>Logotipo</value>
   </data>
   <data name="WelcomeMsg" xml:space="preserve">
-    <value>Hello World! Welcome to MAUI</value>
+    <value>Hola Mundo! Bienvenidos a MAUI</value>
   </data>
   <data name="WelcomeText" xml:space="preserve">
-    <value>Welcome to </value>
+    <value>Bienvenido a </value>
+  </data>
+  <data name="DomesticText" xml:space="preserve">
+    <value>Local</value>
+  </data>
+  <data name="InternationalText" xml:space="preserve">
+    <value>Internacional</value>
   </data>
 </root>
