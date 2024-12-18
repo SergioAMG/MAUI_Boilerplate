@@ -1,10 +1,12 @@
-﻿using CommunityToolkit.Maui;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using PasswordManagerv1.ViewModels;
 using PasswordManagerv1.ViewModels.Brands;
 using PasswordManagerv1.Views;
 using PasswordManagerv1.Views.Brands;
 
+using Syncfusion.Maui.Core.Hosting;
+using Syncfusion.Maui.Toolkit.Hosting;
 namespace PasswordManagerv1
 {
     public static class MauiProgram
@@ -13,16 +15,23 @@ namespace PasswordManagerv1
         {
             var builder = MauiApp.CreateBuilder();
             builder
+                .ConfigureSyncfusionCore()
+                .ConfigureSyncfusionToolkit()
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Roboto-Medium.ttf", "Roboto-Medium");
+                    fonts.AddFont("Roboto-Regular.ttf", "Roboto-Regular");
+                    fonts.AddFont("UIFontIcons.ttf", "FontIcons");
                     fonts.AddFont("Font Awesome 6 Brands-Regular-400.otf", "FontAwesomeBrands");
                     fonts.AddFont("Font Awesome 6 Free-Regular-400.otf", "FontAwesomeRegular");
                     fonts.AddFont("Font Awesome 6 Free-Solid-900.otf", "FontAwesomeSolid");
                 });
+            //Register Syncfusion license https://help.syncfusion.com/common/essential-studio/licensing/how-to-generate
+            //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
             RegisterPagesAndViewModels(builder);
 #if DEBUG
             builder.Logging.AddDebug();
