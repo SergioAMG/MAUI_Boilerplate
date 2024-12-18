@@ -1,5 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Maui.Alerts;
+using CommunityToolkit.Maui.Core;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using PasswordManagerv1.Resources.Localization;
 
 namespace PasswordManagerv1.ViewModels
 {
@@ -13,5 +16,20 @@ namespace PasswordManagerv1.ViewModels
 
         [RelayCommand]
         public async Task BackAsync() => await Shell.Current.GoToAsync("..");
+
+        [RelayCommand]
+        public async Task DisplayLogoButtonPressedActionAsync(string button)
+        {
+            CancellationTokenSource cancellationTokenSource = new();
+            await CreateGenericToast(AppResource.ButtonPressed + button).Show(cancellationTokenSource.Token);
+        }
+
+        IToast CreateGenericToast(string message)
+        {
+            string text = message;
+            ToastDuration duration = ToastDuration.Long;
+            double fontSize = 16;
+            return Toast.Make(text, duration, fontSize);
+        }
     }
 }

@@ -61,11 +61,83 @@ namespace PasswordManagerv1.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Facebook Page.
+        /// </summary>
+        internal static string AirbnbDomesticPageTitle {
+            get {
+                return ResourceManager.GetString("AirbnbDomesticPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facebook Page.
+        /// </summary>
+        internal static string AirbnbInternationalPageTitle {
+            get {
+                return ResourceManager.GetString("AirbnbInternationalPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Button pressed: .
+        /// </summary>
+        internal static string ButtonPressed {
+            get {
+                return ResourceManager.GetString("ButtonPressed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facebook Page.
+        /// </summary>
+        internal static string FacebookPageTitle {
+            get {
+                return ResourceManager.GetString("FacebookPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instagram Page.
+        /// </summary>
+        internal static string InstagramPageTitle {
+            get {
+                return ResourceManager.GetString("InstagramPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logotype.
+        /// </summary>
+        internal static string LogotypeText {
+            get {
+                return ResourceManager.GetString("LogotypeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hello World! Welcome to MAUI.
         /// </summary>
         internal static string WelcomeMsg {
             get {
                 return ResourceManager.GetString("WelcomeMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome to.
+        /// </summary>
+        internal static string WelcomeText {
+            get {
+                return ResourceManager.GetString("WelcomeText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Whats App Page.
+        /// </summary>
+        internal static string WhatsAppPageTitle {
+            get {
+                return ResourceManager.GetString("WhatsAppPageTitle", resourceCulture);
             }
         }
     }

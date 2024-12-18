@@ -3,13 +3,46 @@
     x:Class="PasswordManagerv1.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:PasswordManagerv1.Views"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
+    xmlns:views="clr-namespace:PasswordManagerv1.Views.Brands"
+    xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
+    Shell.FlyoutBehavior="Flyout"
     Title="PasswordManagerv1">
-
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Airbnb">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="PaleVioletRed" />
+            </Tab.Icon>
+            <ShellContent Title="Domestic"
+                          ContentTemplate="{DataTemplate views:AirbnbDomesticPage}">
+                <ShellContent.Icon>
+                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="International"
+                          ContentTemplate="{DataTemplate views:AirbnbInternationalPage}">
+                <ShellContent.Icon>
+                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+        <ShellContent Title="Facebook"
+                      ContentTemplate="{DataTemplate views:FacebookPage}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Facebook }" FontFamily="FontAwesomeBrands" Size="32" Color="Blue" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="WhatsApp"
+                      ContentTemplate="{DataTemplate views:WhatsAppPage}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Whatsapp }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Instagram"
+                      ContentTemplate="{DataTemplate views:InstagramPage}">
+            <ShellContent.Icon>
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Instagram }" FontFamily="FontAwesomeBrands" Size="32" Color="MediumPurple" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </FlyoutItem>
 </Shell>

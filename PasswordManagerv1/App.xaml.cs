@@ -1,5 +1,5 @@
 ﻿
-using PasswordManagerv1.Classes;
+using PasswordManagerv1.Classes.Managers;
 using System.Diagnostics;
 
 namespace PasswordManagerv1
@@ -9,14 +9,13 @@ namespace PasswordManagerv1
         public App()
         {
             InitializeComponent();
-            MainPage = new AppShell();
         }
 
-        /*
+        
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new PasswordManagerWindow(new MainPage());
+            return new WindowManager(new AppShell());
         }
-        */
+        
     }
 }

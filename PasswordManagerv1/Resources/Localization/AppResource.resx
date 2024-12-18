@@ -117,8 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ButtonPressed" xml:space="preserve">
+    <value>Button pressed: </value>
+    <comment>Button Pressed</comment>
+  </data>
+  <data name="FacebookPageTitle" xml:space="preserve">
+    <value>Facebook Page</value>
+    <comment>Facebook Page Title</comment>
+  </data>
+  <data name="AirbnbDomesticPageTitle" xml:space="preserve">
+    <value>Facebook Page</value>
+    <comment>Airbnb Domestic Page Title</comment>
+  </data>
+  <data name="AirbnbInternationalPageTitle" xml:space="preserve">
+    <value>Facebook Page</value>
+    <comment>Airbnb International Page Title</comment>
+  </data>
+  <data name="WhatsAppPageTitle" xml:space="preserve">
+    <value>Whats App Page</value>
+    <comment>Whats App Page Title</comment>
+  </data>
+  <data name="InstagramPageTitle" xml:space="preserve">
+    <value>Instagram Page</value>
+    <comment>Instagram Page Title</comment>
+  </data>
+  <data name="LogotypeText" xml:space="preserve">
+    <value>Logotype</value>
+    <comment>Logotype Text</comment>
+  </data>
   <data name="WelcomeMsg" xml:space="preserve">
     <value>Hello World! Welcome to MAUI</value>
     <comment>Welcome Message</comment>
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Welcome to</value>
+    <comment>Welcome Text</comment>
   </data>
 </root>

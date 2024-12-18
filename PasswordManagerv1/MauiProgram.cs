@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using PasswordManagerv1.ViewModels;
+using PasswordManagerv1.ViewModels.Brands;
 using PasswordManagerv1.Views;
+using PasswordManagerv1.Views.Brands;
 
 namespace PasswordManagerv1
 {
@@ -30,6 +32,12 @@ namespace PasswordManagerv1
 
         public static void RegisterPagesAndViewModels(MauiAppBuilder builder)
         {
+            builder.Services.AddTransient<FacebookPage, FacebookPageViewModel>();
+            builder.Services.AddTransient<InstagramPage, InstagramPageViewModel>();
+            builder.Services.AddTransient<WhatsAppPage, WhatsAppPageViewModel>();
+            builder.Services.AddTransient<AirbnbDomesticPage, AirbnbDomesticPageViewModel>();
+            builder.Services.AddTransient<AirbnbInternationalPage, AirbnbInternationalPageViewModel>();
+
             builder.Services.AddTransient<MainPage, MainPageViewModel>();
         }
     }
