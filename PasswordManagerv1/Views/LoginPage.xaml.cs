@@ -1,4 +1,4 @@
-namespace PasswordManagerv1.Views.Forms
+namespace PasswordManagerv1.Views
 {
     public partial class LoginPage : ContentPage
     {

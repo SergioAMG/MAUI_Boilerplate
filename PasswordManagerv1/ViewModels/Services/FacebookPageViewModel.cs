@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PasswordManagerv1.ViewModels.Brands
+namespace PasswordManagerv1.ViewModels.Services
 {
     public partial class FacebookPageViewModel : BaseViewModel
     {

@@ -1,12 +1,12 @@
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using PasswordManagerv1.ViewModels;
-using PasswordManagerv1.ViewModels.Brands;
+using PasswordManagerv1.ViewModels.Services;
 using PasswordManagerv1.Views;
-using PasswordManagerv1.Views.Brands;
-
+using PasswordManagerv1.Views.Services;
 using Syncfusion.Maui.Core.Hosting;
 using Syncfusion.Maui.Toolkit.Hosting;
+
 namespace PasswordManagerv1
 {
     public static class MauiProgram
@@ -44,10 +44,11 @@ namespace PasswordManagerv1
             builder.Services.AddTransient<FacebookPage, FacebookPageViewModel>();
             builder.Services.AddTransient<InstagramPage, InstagramPageViewModel>();
             builder.Services.AddTransient<WhatsAppPage, WhatsAppPageViewModel>();
-            builder.Services.AddTransient<AirbnbDomesticPage, AirbnbDomesticPageViewModel>();
-            builder.Services.AddTransient<AirbnbInternationalPage, AirbnbInternationalPageViewModel>();
 
-            builder.Services.AddTransient<MainPage, MainPageViewModel>();
+            builder.Services.AddTransient<S3FilesPage, S3FilesPageViewModel>();
+            builder.Services.AddTransient<S3SettingsPage, S3SettingsPageViewModel>();
+
+            //builder.Services.AddTransient<MainPage, MainPageViewModel>();
         }
     }
 }

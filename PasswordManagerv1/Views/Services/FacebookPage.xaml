@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
-             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Brands"
+             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Services"
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
              x:DataType="viewModels:FacebookPageViewModel"
-             x:Class="PasswordManagerv1.Views.Brands.FacebookPage"
-             Title="{x:Static localization:AppResources.FacebookPageTitle}">
-    <Grid VerticalOptions="Center">
+             x:Class="PasswordManagerv1.Views.Services.FacebookPage"
+             Title="Cognito Identity">
+    <!--<Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -35,5 +35,5 @@
                 </ImageButton.Source>
             </ImageButton>
         </FlexLayout>
-    </Grid>
+    </Grid>-->
 </ContentPage>

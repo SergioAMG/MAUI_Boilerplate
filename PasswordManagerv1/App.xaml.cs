@@ -1,4 +1,4 @@
-using PasswordManagerv1.Views.Forms;
+using PasswordManagerv1.Views;
 using PasswordManagerv1.Classes.Managers;
 using System.Diagnostics;
 

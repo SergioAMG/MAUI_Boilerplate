@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PasswordManagerv1.Views.Forms.LoginPage"
+             x:Class="PasswordManagerv1.Views.LoginPage"
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
-             xmlns:local="clr-namespace:PasswordManagerv1"
+             xmlns:viewmodels="clr-namespace:PasswordManagerv1.ViewModels"
              xmlns:button="clr-namespace:Syncfusion.Maui.Toolkit.Buttons;assembly=Syncfusion.Maui.Toolkit"
              xmlns:checkBox="clr-namespace:Syncfusion.Maui.Buttons;assembly=Syncfusion.Maui.Buttons"
-             x:DataType="local:LoginPageViewModel" Title="Login">
+             x:DataType="viewmodels:LoginPageViewModel" Title="Login">
 
     <ContentPage.BindingContext>
-        <local:LoginPageViewModel/>
+        <viewmodels:LoginPageViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
         <ScrollView  VerticalScrollBarVisibility="Never"
                      HorizontalOptions="Center"
                      VerticalOptions="Center">
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
                   VerticalOptions="Center"
                   WidthRequest="{OnPlatform WinUI=386, MacCatalyst=400}">
-                <Label Grid.Row="0"
+                <VerticalStackLayout Grid.Row="0" Margin="0,0,0,30">
+                    <Image Source="aws_logo.png" WidthRequest="150" />
+                    <Label Text="Mobile Service" HorizontalTextAlignment="Center" FontSize="35" FontAttributes="Bold" />
+                </VerticalStackLayout>
+                <Label Grid.Row="1"
                        Text="Log In"
                        FontSize="Medium"
                        HorizontalOptions="Center"
                        TextColor="{AppThemeBinding Light={DynamicResource PrimaryColorLight}, Dark={DynamicResource PrimaryColorDark}}"
                        FontFamily="Roboto-Medium"
                        Padding="0,0,0,20"/>
-                <Label Grid.Row="1"
+                <Label Grid.Row="2"
                        Text="Hello, Welcome back"
                        HorizontalOptions="Center"
                        TextColor="{AppThemeBinding Light={DynamicResource SecondaryTextColorLight}, Dark={DynamicResource SecondaryTextColorDark}}"
                        FontFamily="Roboto-Regular"
                        FontSize="14"
                        Padding="0,0,0,20"/>
-                <dataForm:SfDataForm Grid.Row="2"
+                <dataForm:SfDataForm Grid.Row="3"
                                      x:Name="logInForm"
                                      DataObject="{Binding ContactsInfo}"
                                      MinimumHeightRequest="{OnPlatform WinUI=170, Android=180, MacCatalyst=170, iOS=170}"
@@ -41,7 +45,8 @@
                                      ValidationMode="PropertyChanged">
                     <dataForm:SfDataForm.TextInputLayoutSettings>
                         <dataForm:TextInputLayoutSettings ShowHelperText="True"
-                                                          OutlineCornerRadius="5">
+                                                          OutlineCornerRadius="5"
+                                                          FocusedStroke="{AppThemeBinding Light={DynamicResource PrimaryColorLight}, Dark={DynamicResource PrimaryColorDark}}" >
                             <dataForm:TextInputLayoutSettings.HelperTextStyle>
                                 <dataForm:DataFormTextStyle  FontFamily="Roboto-Regular"/>
                             </dataForm:TextInputLayoutSettings.HelperTextStyle>
@@ -61,7 +66,7 @@
                     </dataForm:SfDataForm.EditorTextStyle>
                 </dataForm:SfDataForm>
 
-                <Grid Grid.Row="3">
+                <Grid Grid.Row="4">
                     <checkBox:SfCheckBox Text="Remember me"
                                        FontSize="14"
                                        FontFamily="Roboto-Medium"
@@ -81,13 +86,16 @@
                                      Margin="0,0,20,0"/>
                 </Grid>
 
-                <button:SfButton Grid.Row="4"
+                <button:SfButton Grid.Row="5"
                                  x:Name="saveButton"
                                  Text="LOG IN"
                                  Margin="20"
                                  Style="{DynamicResource FormsButtonStyle}"
-                                 HorizontalOptions="Fill"/>
-                <Label Grid.Row="5"
+                                 HorizontalOptions="Fill"
+                                 Command="{Binding LoginCommand}"
+                                 CommandParameter="{x:Reference logInForm}"
+                                 />
+                <Label Grid.Row="6"
                        Text="Or login with"
                        TextColor="{AppThemeBinding Light={DynamicResource SecondaryTextColorLight}, Dark={DynamicResource SecondaryTextColorDark}}"
                        FontSize="12"
@@ -95,7 +103,7 @@
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        Margin="10"/>
-                <Grid Grid.Row="6">
+                <Grid Grid.Row="7">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width=".5*"/>
                         <ColumnDefinition Width=".5*"/>
@@ -127,7 +135,7 @@
                                      FontFamily="Roboto-Regular"
                                      Background="Transparent"/>
                 </Grid>
-                <HorizontalStackLayout Grid.Row="7"
+                <HorizontalStackLayout Grid.Row="8"
                                        VerticalOptions="End"
                                        HorizontalOptions="Center">
                     <Label Text="Don't have an account?"
@@ -146,11 +154,4 @@
             </Grid>
         </ScrollView>
     </ContentPage.Content>
-
-    <ContentPage.Behaviors>
-        <local:LoginPageBehavior/>
-    </ContentPage.Behaviors>
-
-
-
 </ContentPage>

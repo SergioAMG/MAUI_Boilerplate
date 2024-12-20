@@ -48,7 +48,8 @@
     <Color x:Key="GrayShadowColor">#ffffff</Color>
     <Color x:Key="GrayShadowBackgroundColor">#f6f7f8</Color>
 
-    <Color x:Key="PrimaryColorLight">#7633DA</Color>
+    <!--<Color x:Key="PrimaryColorLight">#7633DA</Color>-->
+    <Color x:Key="PrimaryColorLight">#F29D38</Color>
     <Color x:Key="SecondaryTextColorLight">#5F5E60</Color>
     <Color x:Key="PlaceholderTextColorLight">#ADAAAC</Color>
     <Color x:Key="SeparatorColorLight">#E5E1E3</Color>

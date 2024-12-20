@@ -2,12 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
-             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Brands"
+             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Services"
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
-             x:DataType="viewModels:WhatsAppPageViewModel"
-             x:Class="PasswordManagerv1.Views.Brands.WhatsAppPage"
-             Title="{x:Static localization:AppResources.WhatsAppPageTitle}">
-    <Grid VerticalOptions="Center">
+             x:DataType="viewModels:S3SettingsPageViewModel"
+             x:Class="PasswordManagerv1.Views.Services.S3SettingsPage"
+             Title="Settings Page">
+    <FlexLayout>
+        <Label Text="Settings Page" FontSize="30"/>
+    </FlexLayout>
+    <!--<Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -15,25 +18,25 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="NoWrap">
+        <FlexLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Wrap="Wrap">
             <Label Text="{x:Static localization:AppResources.WelcomeText}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
                    SemanticProperties.Description="{x:Static localization:AppResources.WelcomeText}"/>
-            <Label Text="{x:Static localization:AppResources.WhatsAppPageTitle}"
+            <Label Text="{x:Static localization:AppResources.AirbnbInternationalPageTitle}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResources.WhatsAppPageTitle}"/>
+                   SemanticProperties.Description="{x:Static localization:AppResources.AirbnbInternationalPageTitle}"/>
         </FlexLayout>
         <FlexLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
             <ImageButton BackgroundColor="Transparent" Margin="0,10,0,0"
                 SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
                 Command="{Binding DisplayLogoButtonPressedActionCommand}"
-                CommandParameter="{x:Static localization:AppResources.WhatsAppPageTitle}">
+                CommandParameter="{x:Static localization:AppResources.AirbnbInternationalPageTitle}">
                 <ImageButton.Source>
-                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Whatsapp }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
+                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="60" Color="MediumVioletRed" />
                 </ImageButton.Source>
             </ImageButton>
         </FlexLayout>
-    </Grid>
+    </Grid>-->
 </ContentPage>

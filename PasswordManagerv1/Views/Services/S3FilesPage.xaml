@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
+             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Services"
+             xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
+             x:DataType="viewModels:S3FilesPageViewModel"
+             x:Class="PasswordManagerv1.Views.Services.S3FilesPage"
+             Title="S3 Files Page">
+    <Grid VerticalOptions="Start" HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <FlexLayout HorizontalOptions="Start" Grid.Row="0">
+            <VerticalStackLayout VerticalOptions="Center" Spacing="10">
+                <ImageButton BackgroundColor="Transparent" WidthRequest="100"
+                        SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
+                        Command="{Binding ListBucketsCommand}"
+                        Source="s3.png">
+                </ImageButton>
+                <Label Text="Retrieve List of Buckets From S3" FontSize="15" VerticalOptions="Center" />
+                <ActivityIndicator Color="Orange" IsRunning="{Binding ListBucketsCommand.IsRunning}" IsVisible="{Binding ListBucketsCommand.IsRunning}" WidthRequest="35" />
+            </VerticalStackLayout>
+        </FlexLayout>
+        <FlexLayout Grid.Row="1" IsVisible="{Binding IsBucketPickerVisible}" Margin="0,50,0,0" HorizontalOptions="Center">
+            <HorizontalStackLayout Grid.Row="1" HorizontalOptions="Center">
+                <Picker Title="Select a Bucket"
+                    ItemsSource="{Binding BucketList}"
+                    ItemDisplayBinding="{Binding BucketName}"
+                    SelectedItem="{Binding SelectedBucket}"
+                    WidthRequest="220" HorizontalOptions="Center" HorizontalTextAlignment="Center">
+                </Picker>
+            </HorizontalStackLayout>
+        </FlexLayout>
+        <FlexLayout Grid.Row="2" IsVisible="True" Margin="0,10,0,0">
+            <CollectionView ItemsSource="{Binding S3Files}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="viewModels:S3File">
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ImageButton Grid.RowSpan="2" BackgroundColor="Transparent" Margin="0,10,0,0"
+    SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}">
+                                <ImageButton.Source>
+                                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Aws }" FontFamily="FontAwesomeBrands" Size="25" Color="Blue" />
+                                </ImageButton.Source>
+                            </ImageButton>
+                            <Label Grid.Column="1"
+                       Text="{Binding Name}"
+                       FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                       Grid.Column="1"
+                       Text="{Binding LastModified}"
+                       FontAttributes="Italic"
+                       VerticalOptions="End" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </FlexLayout>
+    </Grid>
+</ContentPage>

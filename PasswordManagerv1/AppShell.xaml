@@ -4,44 +4,36 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
-    xmlns:views="clr-namespace:PasswordManagerv1.Views.Brands"
+    xmlns:views="clr-namespace:PasswordManagerv1.Views.Services"
     xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
     Shell.FlyoutBehavior="Flyout"
     Title="PasswordManagerv1">
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Airbnb">
+        <Tab Title="S3 Service">
             <Tab.Icon>
-                <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="PaleVioletRed" />
+                <FontImageSource Glyph="{x:Static icons:IconFontSolid.ScrewdriverWrench }" FontFamily="FontAwesomeSolid" Size="32" Color="PaleVioletRed" />
             </Tab.Icon>
-            <ShellContent Title="{x:Static localization:AppResources.DomesticText}"
-                          ContentTemplate="{DataTemplate views:AirbnbDomesticPage}">
-                <ShellContent.Icon>
-                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />
-                </ShellContent.Icon>
-            </ShellContent>
-            <ShellContent Title="{x:Static localization:AppResources.InternationalText}"
-                          ContentTemplate="{DataTemplate views:AirbnbInternationalPage}">
-                <ShellContent.Icon>
-                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Airbnb }" FontFamily="FontAwesomeBrands" Size="32" Color="Black" />
-                </ShellContent.Icon>
-            </ShellContent>
+            <ShellContent Title="Files"
+                          ContentTemplate="{DataTemplate views:S3FilesPage }" />
+            <ShellContent Title="Settings"
+                          ContentTemplate="{DataTemplate views:S3SettingsPage}" />
         </Tab>
-        <ShellContent Title="Facebook"
+        <ShellContent Title="Cognito Identity"
                       ContentTemplate="{DataTemplate views:FacebookPage}">
             <ShellContent.Icon>
-                <FontImageSource Glyph="{x:Static icons:BrandIcons.Facebook }" FontFamily="FontAwesomeBrands" Size="32" Color="Blue" />
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Aws}" FontFamily="FontAwesomeBrands" Size="32" Color="Blue" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent Title="WhatsApp"
+        <ShellContent Title="DynamoDB"
                       ContentTemplate="{DataTemplate views:WhatsAppPage}">
             <ShellContent.Icon>
-                <FontImageSource Glyph="{x:Static icons:BrandIcons.Whatsapp }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Aws }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
             </ShellContent.Icon>
         </ShellContent>
-        <ShellContent Title="Instagram"
+        <ShellContent Title="SNS"
                       ContentTemplate="{DataTemplate views:InstagramPage}">
             <ShellContent.Icon>
-                <FontImageSource Glyph="{x:Static icons:BrandIcons.Instagram }" FontFamily="FontAwesomeBrands" Size="32" Color="MediumPurple" />
+                <FontImageSource Glyph="{x:Static icons:BrandIcons.Aws }" FontFamily="FontAwesomeBrands" Size="32" Color="MediumPurple" />
             </ShellContent.Icon>
         </ShellContent>
     </FlyoutItem>

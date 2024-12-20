@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:icons="clr-namespace:PasswordManagerv1.Resources.Styles.Icons"
-             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Brands"
+             xmlns:viewModels="clr-namespace:PasswordManagerv1.ViewModels.Services"
              xmlns:localization="clr-namespace:PasswordManagerv1.Resources.Localization"
-             x:DataType="viewModels:InstagramPageViewModel"
-             x:Class="PasswordManagerv1.Views.Brands.InstagramPage"
-             Title="{x:Static localization:AppResources.InstagramPageTitle}">
+             x:DataType="viewModels:WhatsAppPageViewModel"
+             x:Class="PasswordManagerv1.Views.Services.WhatsAppPage"
+             Title="DynamoDB">
     <Grid VerticalOptions="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -20,18 +20,18 @@
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
                    SemanticProperties.Description="{x:Static localization:AppResources.WelcomeText}"/>
-            <Label Text="{x:Static localization:AppResources.InstagramPageTitle}"
+            <Label Text="{x:Static localization:AppResources.WhatsAppPageTitle}"
                    Style="{StaticResource SubHeadline}"
                    SemanticProperties.HeadingLevel="Level2"
-                   SemanticProperties.Description="{x:Static localization:AppResources.InstagramPageTitle}"/>
+                   SemanticProperties.Description="{x:Static localization:AppResources.WhatsAppPageTitle}"/>
         </FlexLayout>
         <FlexLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
             <ImageButton BackgroundColor="Transparent" Margin="0,10,0,0"
                 SemanticProperties.Description="{x:Static localization:AppResources.LogotypeText}"
                 Command="{Binding DisplayLogoButtonPressedActionCommand}"
-                CommandParameter="{x:Static localization:AppResources.InstagramPageTitle}">
+                CommandParameter="{x:Static localization:AppResources.WhatsAppPageTitle}">
                 <ImageButton.Source>
-                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Instagram }" FontFamily="FontAwesomeBrands" Size="60" Color="MediumPurple" />
+                    <FontImageSource Glyph="{x:Static icons:BrandIcons.Whatsapp }" FontFamily="FontAwesomeBrands" Size="32" Color="Green" />
                 </ImageButton.Source>
             </ImageButton>
         </FlexLayout>

@@ -1,20 +1,29 @@
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using PasswordManagerv1.ViewModels;
 using Syncfusion.Maui.DataForm;
 using System.ComponentModel.DataAnnotations;
 
-namespace PasswordManagerv1
+namespace PasswordManagerv1.ViewModels
 {
-    public class LoginPageViewModel
+    public partial class LoginPageViewModel : BaseViewModel
     {
-
         public ContactsInfo ContactsInfo { get; set; }
 
-        #region Constructor
         public LoginPageViewModel()
         {
-            this.ContactsInfo = new ContactsInfo();
+            ContactsInfo = new ContactsInfo();
         }
 
-        #endregion
+        [RelayCommand]
+        public void Login(SfDataForm form)
+        {
+            bool isValid = form.Validate();
+            string login = ContactsInfo.Email;
+
+            if (isValid)
+                Application.Current.MainPage = new AppShell();
+        }
     }
 
     public class ContactsInfo
